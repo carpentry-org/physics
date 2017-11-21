@@ -1,0 +1,61 @@
+(use Double)
+
+(load "src/basics.carp")
+(use Basics)
+
+(load "src/constants.carp")
+(use Constants)
+
+
+(defmodule Electromagnetic
+
+  (defn kinetic [m v]
+    (* (/ 1.0 2.0) (* m (pow v 2.0))))
+
+  (defn current [q1 q2 t1 t2]
+    (/ (changein q1 q2) (changein t1 t2)))
+
+  (defn ohmic-resistance [v i]
+    (/ v i))
+
+  (defn resistivity [r l a]
+    (/ (* r l) a))
+
+  (defn vi-power [v i]
+    (* v i))
+
+  (defn ir-power [i r]
+    (* (pow i 2.0) r))
+
+  (defn v-power [v r]
+    (/ (v 2.0) r))
+
+  (defn emf [i r rs]
+    (* i (+ r rs)))
+
+  (defn series [resistances]
+    (let [x 0.0]
+      (do
+        (for [i 0 (Array.count resistances)]
+          (set! &x (+ x (Array.nth resistances i))))
+        x)))
+
+  (defn parallel [resistances]
+    (let [x 0.0]
+      (do
+        (for [i 0 (Array.count resistances)]
+          (set! &x (+ x (/ 1.0 (Array.nth resistances i)))))
+        (/ 1.0 x))))
+
+  (defn flux-component [b a theta]
+    (* b (* a (cos (Geometry.degree-to-radians theta)))))
+
+  (defn induced-emf [b v l]
+    (* (* b v) l))
+
+  (defn gauss [q]
+    (/ q coulomb-constant))
+
+  (defn coil-emf [n magf1 magf2 t1 t2]
+    (/ (* (* -1.0 n) (changein magf1 magf2)) (changein t1 t2)))
+)

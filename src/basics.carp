@@ -1,0 +1,7 @@
+(defmodule Basics
+
+  (defn changein [p1 p2]
+    (Double.- p2 p1))
+
+  (defn twosig [n]
+    (Double./ (Double.ceil (Double.* n 100.0)) 100.0)))

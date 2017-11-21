@@ -1,0 +1,10 @@
+(defmodule Physics
+  (load "src/basics.carp")
+  (use Basics)
+
+  (load "src/constants.carp")
+  (use Constants)
+
+  (load "src/electromagnetic.carp")
+  (use Electromagnetic)
+)
