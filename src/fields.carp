@@ -1,0 +1,53 @@
+(use Double)
+(use Geometry)
+
+(load "src/basics.carp")
+(use Basics)
+(load "src/constants.carp")
+(use Constants)
+(load "src/multipliers.carp")
+(use Multipliers)
+(load "src/units.carp")
+(use Units)
+
+(defmodule Fields
+
+  (defn gravitational-force [mone mtwo r]
+    (* gravitational-constant (/ (* mone two) (pow r 2.0))))
+
+  (defn coulomb-force [qone qtwo r]
+    (* coulomb-constant (/ (* qone qtwo) (pow r 2.0))))
+
+  (defn gravitational-acceleration [f m]
+    (/ f m))
+
+  (defn electric-field [f q]
+    (/ f q))
+
+  (defn grad-electric-field [v1 v2 x1 x2]
+    (/ (* -1.0 (changein v1 v2)) (changein x1 x2)))
+
+  (defn grad-grav-field [u1 u2 x1 x2]
+    (/ (* -1.0 (changein u1 u2)) (changein x1 x2)))
+
+  (defn particle-magnetic-force [q v b theta]
+    (* (* q (* v b)) (sin (degrees-to-radians theta))))
+
+  (defn conductor-magnetic-force [b i l theta]
+    (* (* b (* i l)) (sin (degrees-to-radians theta))))
+
+  (defn particle-gravitational-potential-energy [m M r]
+    (* (* -1.0 gravitational-constant) (/ (* m M) r)))
+
+  (defn gravitational-potential-energy [m r]
+    (* (* -1.0 gravitational-constant) (/ m r)))
+
+  (defn escape-velocity [m r]
+    (* (sqrt (* 2.0 gravitational-constant) (/ m r))))
+
+  (defn charge-electric-potential-energy [mq q r]
+    (* coulomb-constant (/ (* mq q) r)))
+
+  (defn electric-potential-energy [q r]
+    (* coulomb-constant (/ q r)))
+)

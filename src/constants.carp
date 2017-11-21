@@ -4,47 +4,70 @@
 (use Multipliers)
 
 (defmodule Constants
-  (def gravitational-acceleration 9.81)
 
-  (def gravitational-constant (* 6.67 (pow 10.0 -11.0))
+  (defn gravitational-acceleration []
+     9.81)
 
-  (def avogadros-constant (* 6.02 (pow 10.0 23.0)))
+  (defn gravitational-constant []
+     (* 6.67 (pow 10.0 -11.0))
 
-  (def gas-constant 8.31)
+  (defn avogadros-constant []
+     (* 6.02 (pow 10.0 23.0)))
 
-  (def boltzmanns-constant (* 1.38 (pow 10.0 -23.0)))
+  (defn gas-constant []
+     8.31)
 
-  (def stefan-boltzmann-constant (* 5.67 (pow 10.0 -8.0)))
+  (defn boltzmanns-constant []
+     (* 1.38 (pow 10.0 -23.0)))
 
-  (def coulomb-constant (* 8.99 (pow 10.0 9.0)))
+  (defn stefan-boltzmann-constant []
+     (* 5.67 (pow 10.0 -8.0)))
 
-  (def permittivity-free-space (* 8.85 (pow 10.0 -12.0)))
+  (defn coulomb-constant []
+     (* 8.99 (pow 10.0 9.0)))
 
-  (def speed-of-light-vacuum (* 3.0 (pow 10.0 8.0)))
+  (defn permittivity-free-space []
+     (* 8.85 (pow 10.0 -12.0)))
 
-  (def plancks-constant (* 6.63 (pow 10.0 -34.0)))
+  (defn speed-of-light-vacuum []
+     (* 3.0 (pow 10.0 8.0)))
 
-  (def elementary-charge (* 1.6 (pow 10.0 -19.0)))
+  (defn plancks-constant []
+     (* 6.63 (pow 10.0 -34.0)))
 
-  (def electron-rest-mass-kg (* 9.110 (pow 10.0 -31)))
+  (defn elementary-charge []
+     (* 1.6 (pow 10.0 -19.0)))
 
-  (def electron-rest-mass-u 0.000549)
+  (defn electron-rest-mass-kg []
+     (* 9.110 (pow 10.0 -31)))
 
-  (def electron-rest-mass-ev (* 0.511 M))
+  (defn electron-rest-mass-u []
+     0.000549)
 
-  (def proton-rest-mass-kg (* 1.673 (pow 10.0 -27.0)))
+  (defn electron-rest-mass-ev []
+     (* 0.511 (M)))
 
-  (def proton-rest-mass-u 1.007276)
+  (defn proton-rest-mass-kg []
+     (* 1.673 (pow 10.0 -27.0)))
 
-  (def proton-rest-mass-ev (* 938.0 M))
+  (defn proton-rest-mass-u []
+     1.007276)
 
-  (def neutron-rest-mass-kg (* 1.675 (pow 10.0 -27.0)))
+  (defn proton-rest-mass-ev []
+     (* 938.0 (M)))
 
-  (def neutron-rest-mass-u 1.008665)
+  (defn neutron-rest-mass-kg []
+     (* 1.675 (pow 10.0 -27.0)))
 
-  (def neutron-rest-mass-ev (* 940.0 M))
+  (defn neutron-rest-mass-u []
+     1.008665)
 
-  (def unified-atomic-mass-kg (* 1.661 (pow 10.0 -27.0)))
+  (defn neutron-rest-mass-ev []
+     (* 940.0 (M)))
 
-  (def unified-atomic-mass-ev (* 931.5 M))
+  (defn unified-atomic-mass-kg []
+     (* 1.661 (pow 10.0 -27.0)))
+
+  (defn unified-atomic-mass-ev []
+     (* 931.5 (M)))
 )

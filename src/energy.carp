@@ -1,0 +1,27 @@
+(use Double)
+
+(load "src/basics.carp")
+(use Basics)
+(load "src/constants.carp")
+(use Constants)
+
+(defmodule Energy
+
+  (defn power [a p v]
+    (* (/ 1.0 2.0) (* (* A p) (pow v 3.0))))
+
+  (defn power-length [a p v]
+    (* (/ 1.0 2.0) (* (* (pow A 2.0) p) (* gravitational-acceleration v))))
+
+  (defn intensity [p a]
+    (/ p a))
+
+  (defn albedo [s i]
+    (/ s i))
+
+  (defn transfer-surface [shc a t1 t2]
+    (* (* shc a) (changein t1 t2)))
+
+  (defn surface-heat [q a t1 t2]
+    (/ q (* a (changein t1 t2))))
+)

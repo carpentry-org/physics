@@ -1,0 +1,31 @@
+(use Double)
+
+(load "src/basics.carp")
+(use Basics)
+(load "src/constants.carp")
+(use Constants)
+(load "src/multipliers.carp")
+(use Multipliers)
+(load "src/units.carp")
+(use Units)
+
+(defmodule Thermal
+
+  (defn pressure [f a]
+    (/ f a))
+
+  (defn heat [m shc t1 t2]
+    (* (* m shc) (changein t1 t2)))
+
+  (defn latent-heat [m l]
+    (* m l))
+
+  (defn ideal-gas-pv [n t]
+    (* (* n (gas-constant)) t))
+
+  (defn work [p v1 v2]
+    (* p (changein v1 v2)))
+
+  (defn heat-change [u1 u2 w]
+    (+ (changein u1 u2) w))
+)

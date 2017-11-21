@@ -2,29 +2,42 @@
 
 (defmodule Multipliers
 
-  (def T (pow 10.0 12.0))
+  (defn T []
+     (pow 10.0 12.0))
 
-  (def G (pow 10.0 9.0))
+  (defn G []
+     (pow 10.0 9.0))
 
-  (def M (pow 10.0 6.0))
+  (defn M []
+     (pow 10.0 6.0))
 
-  (def k (pow 10.0 3.0))
+  (defn k []
+     (pow 10.0 3.0))
 
-  (def h (pow 10.0 2.0))
+  (defn h []
+     (pow 10.0 2.0))
 
-  (def da (pow 10.0 1.0))
+  (defn da []
+     (pow 10.0 1.0))
 
-  (def d (pow 10.0 -1.0))
+  (defn d []
+     (pow 10.0 -1.0))
 
-  (def c (pow 10.0 -2.0))
+  (defn c []
+     (pow 10.0 -2.0))
 
-  (def m (pow 10.0 -3.0))
+  (defn m []
+     (pow 10.0 -3.0))
 
-  (def u (pow 10.0 -6.0))
+  (defn u []
+     (pow 10.0 -6.0))
 
-  (def n (pow 10.0 -9.0))
+  (defn n []
+     (pow 10.0 -9.0))
 
-  (def p (pow 10.0 -12.0))
+  (defn p []
+     (pow 10.0 -12.0))
 
-  (def f (pow 10.0 -15.0))
+  (defn f []
+     (pow 10.0 -15.0))
 )
