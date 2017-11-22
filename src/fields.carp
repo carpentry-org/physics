@@ -44,7 +44,7 @@
     (* (* -1.0 (gravitational-constant)) (/ m r)))
 
   (defn escape-velocity [m r]
-    (* (sqrt (* 2.0 (gravitational-constant))) (/ m r)))
+    (sqrt (* (* 2.0 (gravitational-constant)) (/ m r))))
 
   (defn charge-electric-potential-energy [mq q r]
     (* (coulomb-constant) (/ (* mq q) r)))
