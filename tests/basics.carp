@@ -1,0 +1,23 @@
+(load "Test.carp")
+(use Test)
+
+(load "physics.carp")
+(use Physics)
+
+(defn main []
+  (with-test test
+    (assert-equal test
+                  -7.0
+                  (changein 9.0 2.0)
+                  "changein 9 2 == -7"
+                  Double.=
+                  Double.str
+    )
+    (assert-equal test
+                  2.0
+                  (changein 0.0 2.0)
+                  "changein 0 2 == -7"
+                  Double.=
+                  Double.str
+    )
+    (print-test-results test)))

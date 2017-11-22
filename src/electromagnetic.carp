@@ -1,5 +1,7 @@
 (use Double)
 
+(load "Geometry.carp")
+
 (load "src/basics.carp")
 (use Basics)
 
