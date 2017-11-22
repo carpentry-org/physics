@@ -11,6 +11,9 @@
 
 (defmodule Electromagnetic
 
+  ; TODO: this is hack to work around carp-lang/carp#102
+  (defn trick [] [0.0])
+
   (defn kinetic [m v]
     (* (/ 1.0 2.0) (* m (pow v 2.0))))
 
