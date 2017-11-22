@@ -24,7 +24,7 @@
     (/ v i))
 
   (defn resistivity [r l a]
-    (/ (* r l) a))
+    (/ (* r a) l))
 
   (defn vi-power [v i]
     (* v i))
@@ -33,7 +33,7 @@
     (* (pow i 2.0) r))
 
   (defn v-power [v r]
-    (/ (v 2.0) r))
+    (/ (pow v 2.0) r))
 
   (defn emf [i r rs]
     (* i (+ r rs)))

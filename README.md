@@ -3,7 +3,7 @@
 This is a Carp port of [phys.js](https://github.com/AbhiAgarwal/phys.js),
 and serves as an example for the structure of an external library in Carp.
 
-The port itself is done, but I will add test cases in `test/` to make this
+The port itself is done, but I will add test cases in `tests/` to make this
 a better example of what well-structured Carp modules could possibly look
 like.
 
