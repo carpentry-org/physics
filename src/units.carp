@@ -24,8 +24,8 @@
     (* 1.01 (pow 10.0 5.0)))
 
   (defn atmosphere-unit-pa []
-    (* 101 (k)))
+    (* 101.0 (k)))
 
   (defn atmosphere-unit-hg []
-    760)
+    760.0)
 )

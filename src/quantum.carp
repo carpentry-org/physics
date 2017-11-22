@@ -1,0 +1,55 @@
+(use Double)
+
+(load "src/basics.carp")
+(use Basics)
+(load "src/constants.carp")
+(use Constants)
+(load "src/multipliers.carp")
+(use Multipliers)
+(load "src/units.carp")
+(use Units)
+
+(defmodule Quantum
+
+  (defn energy [mass]
+    (* (pow (speed-of-light-vacuum) 2.0) mass))
+
+  (defn energy-light [f]
+    (* (plancks-constant) f))
+
+  (defn momentum [wave-len]
+    (/ (plancks-constant) wave-len))
+
+  (defn de-broglie [p]
+    (/ (plancks-constant) p))
+
+  (defn unc-position [dmomentum]
+    (/ (plancks-constant) (* (* 4.0 π) dmomentum)))
+
+  (defn unc-momentum [dposition]
+    (/ (plancks-constant) (* (* 4.0 π) dposition)))
+
+  (defn max-kinetic-energy [w f]
+    (- (* (plancks-constant) f) w))
+
+  (defn min-work [f0]
+    (* (plancks-constant) f0))
+
+  (defn theshold-freq [w]
+    (/ w (plancks-constant)))
+
+  (defn energy-levels [n m l]
+    (/ (* (pow n 2.0) (pow (plancks-constant) 2.0)) (* (* 8.0 m) (pow l 2.0))))
+
+  (defn decay [n lambd time]
+    (* n (pow e (* (* -1.0 lambd) time))))
+
+  (defn half-life [lambd]
+    (/ (log 2.0) lambd))
+
+  (defn activity [n l]
+    (* n l))
+
+  (defn activity-e [n l t]
+    (* l (decay n l t)))
+)

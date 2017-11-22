@@ -13,10 +13,10 @@
 (defmodule Fields
 
   (defn gravitational-force [mone mtwo r]
-    (* gravitational-constant (/ (* mone two) (pow r 2.0))))
+    (* (gravitational-constant) (/ (* mone mtwo) (pow r 2.0))))
 
   (defn coulomb-force [qone qtwo r]
-    (* coulomb-constant (/ (* qone qtwo) (pow r 2.0))))
+    (* (coulomb-constant) (/ (* qone qtwo) (pow r 2.0))))
 
   (defn gravitational-acceleration [f m]
     (/ f m))
@@ -31,23 +31,23 @@
     (/ (* -1.0 (changein u1 u2)) (changein x1 x2)))
 
   (defn particle-magnetic-force [q v b theta]
-    (* (* q (* v b)) (sin (degrees-to-radians theta))))
+    (* (* q (* v b)) (sin (degree-to-radians theta))))
 
   (defn conductor-magnetic-force [b i l theta]
-    (* (* b (* i l)) (sin (degrees-to-radians theta))))
+    (* (* b (* i l)) (sin (degree-to-radians theta))))
 
   (defn particle-gravitational-potential-energy [m M r]
-    (* (* -1.0 gravitational-constant) (/ (* m M) r)))
+    (* (* -1.0 (gravitational-constant)) (/ (* m M) r)))
 
   (defn gravitational-potential-energy [m r]
-    (* (* -1.0 gravitational-constant) (/ m r)))
+    (* (* -1.0 (gravitational-constant)) (/ m r)))
 
   (defn escape-velocity [m r]
-    (* (sqrt (* 2.0 gravitational-constant) (/ m r))))
+    (* (sqrt (* 2.0 (gravitational-constant))) (/ m r)))
 
   (defn charge-electric-potential-energy [mq q r]
-    (* coulomb-constant (/ (* mq q) r)))
+    (* (coulomb-constant) (/ (* mq q) r)))
 
   (defn electric-potential-energy [q r]
-    (* coulomb-constant (/ q r)))
+    (* (coulomb-constant) (/ q r)))
 )

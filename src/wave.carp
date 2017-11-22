@@ -1,0 +1,52 @@
+(use Double)
+
+(load "src/basics.carp")
+(use Basics)
+(load "src/constants.carp")
+(use Constants)
+(load "src/multipliers.carp")
+(use Multipliers)
+(load "src/units.carp")
+(use Units)
+
+(defmodule Wave
+
+  (defn angular-frequency [t]
+    (/ (* 2.0 π) t))
+
+  (defn displacement [a w t]
+    (* a (sin (* w t))))
+
+  (defn velocity [w a t]
+    (* (* w a) (cos (* w t))))
+
+  (defn acceleration [w a t]
+    (* (* (pow (* -1.0 w) 2.0) a) (sin (* w t))))
+
+  (defn kinetic-energy [m w a x]
+    (* (* (* 0.5 m) (pow w 2.0)) (- (pow a 2.0) (pow x 2.0))))
+
+  (defn potential-energy [m w x]
+    (* (* (* 0.5 m) (pow w 2.0)) (pow x 2.0)))
+
+  (defn net-energy [m w a]
+    (* (* (* 0.5 m) (pow w 2.0)) (pow a 2.0)))
+
+  (defn wave-speed [frequency wave-length]
+    (* frequency wave-length))
+
+  (defn refractive-index [v1 v2 n1]
+    (/ (* n1 v1) v2))
+
+  (defn angular-resolution [wave-length d]
+    (* 1.22 (/ wave-length d)))
+
+  (defn beat-frequency [f1 f2]
+    (abs (- f2  f1)))
+
+  (defn harmonic-len [l n]
+    (/ (* 2.0 l) n))
+
+  (defn harmonic-freq [v l n]
+    (/ v (harmonic-len l n)))
+)

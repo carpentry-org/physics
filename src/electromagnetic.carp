@@ -37,14 +37,14 @@
     (let [x 0.0]
       (do
         (for [i 0 (Array.count resistances)]
-          (set! &x (+ x (Array.nth resistances i))))
+          (set! &x (+ x @(Array.nth resistances i))))
         x)))
 
   (defn parallel [resistances]
     (let [x 0.0]
       (do
         (for [i 0 (Array.count resistances)]
-          (set! &x (+ x (/ 1.0 (Array.nth resistances i)))))
+          (set! &x (+ x (/ 1.0 @(Array.nth resistances i)))))
         (/ 1.0 x))))
 
   (defn flux-component [b a theta]
@@ -54,7 +54,7 @@
     (* (* b v) l))
 
   (defn gauss [q]
-    (/ q coulomb-constant))
+    (/ q (coulomb-constant)))
 
   (defn coil-emf [n magf1 magf2 t1 t2]
     (/ (* (* -1.0 n) (changein magf1 magf2)) (changein t1 t2)))

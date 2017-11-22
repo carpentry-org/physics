@@ -1,0 +1,64 @@
+(use Double)
+
+(load "src/basics.carp")
+(use Basics)
+(load "src/constants.carp")
+(use Constants)
+(load "src/multipliers.carp")
+(use Multipliers)
+(load "src/units.carp")
+(use Units)
+
+(defmodule Mechanics
+
+  (defn momentum [m v]
+    (* m v))
+
+  (defn force [m]
+    (* m (gravitational-acceleration)))
+
+  (defn force-momentum [m1 v1 m2 v2 t1 t2]
+    (/ (changein (momentum m1 m2) (momentum m2 v2)) (changein t1 t2)))
+
+  (defn suvat-uta [u t a]
+    (+ (* u t) (* (* (/ 1.0 2.0) a) (pow t 2.0))))
+
+  (defn suvat-uvt [u v t]
+    (* (/ 1.0 2.0) (* (+ u v) t)))
+
+  (defn suvat-vta [v t a]
+    (- (* v t) (* (* (/ 1.0 2.0) a) (pow t 2.0))))
+
+  (defn suvat-uat [u a t]
+    (+ u (* a t)))
+
+  (defn suvat-uas [u a s]
+    (+ (pow u 2.0) (* (* 2.0 a) s)))
+
+  (defn impulse-mass [m v1 v2]
+    (* m (changein v1 v2)))
+
+  (defn impulse-force [f t1 t2]
+    (* f (changein t1 t2)))
+
+  (defn work-done [f s angle]
+    (* (* f s) (cos angle)))
+
+  (defn kinetic-velocity [v m]
+    (* (* (/ 1.0 2.0) m) (pow v 2.0)))
+
+  (defn kinetic-momentum [v m]
+    (/ (pow (momentum m v) 2.0) (* 2.0 m)))
+
+  (defn potential [m h1 h2]
+    (* (* m (gravitational-acceleration)) (changein h1 h2)))
+
+  (defn power [f v]
+    (* f v))
+
+  (defn centripetal-velocity [v r]
+    (/ (pow v 2.0) r))
+
+  (defn centripetal-time [r t]
+    (/ (* (* 4.0 (pow π 2.0)) r) (pow t 2.0)))
+)

@@ -7,4 +7,28 @@
 
   (load "src/electromagnetic.carp")
   (use Electromagnetic)
+
+  (load "src/energy.carp")
+  (use Energy)
+
+  (load "src/fields.carp")
+  (use Fields)
+
+  (load "src/Mechanics.carp")
+  (use Mechanics)
+
+  (load "src/multipliers.carp")
+  (use Multipliers)
+
+  (load "src/quantum.carp")
+  (use Quantum)
+
+  (load "src/thermal.carp")
+  (use Thermal)
+
+  (load "src/units.carp")
+  (use Units)
+
+  (load "src/wave.carp")
+  (use Wave)
 )
