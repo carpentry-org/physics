@@ -143,7 +143,7 @@
                   0.000000000000005633189227582935
                   (flux-component 23.0 4.0 90.0)
                   "flux-component 23 4 90 == 0.000000000000005633189227582935"
-                  Double.approx ; TODO: approx makes this pretty much useless
+                  Double.approx ; TODO: cos in JS and C disagree
                   Double.str
     )
     (assert-equal test

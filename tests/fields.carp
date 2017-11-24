@@ -87,7 +87,7 @@
                   5.926130043570827
                   (particle-magnetic-force 1.0 2.0 3.0 81.0)
                   "particle-magnetic-force 1 2 3 81 == 5.926130043570827"
-                  Double.approx ; TODO: approx makes this test useless
+                  Double.=
                   Double.str
     )
     (assert-equal test
@@ -101,7 +101,7 @@
                   153.69418268000936
                   (conductor-magnetic-force 19.0 2.1 3.9 81.0)
                   "conductor-magnetic-force 19 2.1 3.9 81 == 153.69418268000936"
-                  Double.approx ; TODO: approx makes this test useless
+                  Double.=
                   Double.str
     )
     (assert-equal test

@@ -38,7 +38,7 @@
                   3436.591412195351
                   (velocity 19.0 201.0 3.0)
                   "velocity 19 201 3 == 3436.591412195351"
-                  Double.approx
+                  Double.approx ; TODO: cos in JS and C disagree
                   Double.str
     )
     (assert-equal test

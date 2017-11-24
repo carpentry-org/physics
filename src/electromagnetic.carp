@@ -11,9 +11,6 @@
 
 (defmodule Electromagnetic
 
-  ; TODO: this is hack to work around carp-lang/carp#102
-  (defn trick [] [0.0])
-
   (defn kinetic [m v]
     (* (/ 1.0 2.0) (* m (pow v 2.0))))
 
@@ -53,7 +50,7 @@
         (/ 1.0 x))))
 
   (defn flux-component [b a theta]
-    (* b (* a (cos (Geometry.degree-to-radians theta)))))
+    (* (* b a) (cos (Geometry.degree-to-radians theta))))
 
   (defn induced-emf [b v l]
     (* (* b v) l))
