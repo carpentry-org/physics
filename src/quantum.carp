@@ -35,7 +35,7 @@
   (defn min-work [f0]
     (* (plancks-constant) f0))
 
-  (defn theshold-freq [w]
+  (defn threshold-freq [w]
     (/ w (plancks-constant)))
 
   (defn energy-levels [n m l]
