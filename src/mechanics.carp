@@ -18,7 +18,7 @@
     (* m (gravitational-acceleration)))
 
   (defn force-momentum [m1 v1 m2 v2 t1 t2]
-    (/ (changein (momentum m1 m2) (momentum m2 v2)) (changein t1 t2)))
+    (/ (changein (momentum m1 v1) (momentum m2 v2)) (changein t1 t2)))
 
   (defn suvat-uta [u t a]
     (+ (* u t) (* (* (/ 1.0 2.0) a) (pow t 2.0))))
