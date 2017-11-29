@@ -10,182 +10,131 @@
                   0.5711986642890533
                   (angular-frequency 11.0)
                   "angular-frequency 11 == 0.5711986642890533"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.6283185307179586
                   (angular-frequency 10.0)
                   "angular-frequency 10 == 0.6283185307179586"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   3.3526386523148384
                   (displacement 12.0 19.0 19.0)
                   "displacement 12 19 19 == 3.3526386523148384"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   6.283133397683515
                   (displacement 13.0 21.0 9.0)
                   "displacement 13 21 9 == 6.283133397683515"
-                  Double.=
-                  Double.str
     )
-    (assert-equal test
-                  3436.591412195351
-                  (velocity 19.0 201.0 3.0)
-                  "velocity 19 201 3 == 3436.591412195351"
-                  Double.approx ; TODO: cos in JS and C disagree
-                  Double.str
+    (assert-op test
+               3436.591412195351
+               (velocity 19.0 201.0 3.0)
+               "velocity 19 201 3 == 3436.591412195351"
+               Double.approx ; TODO: cos in JS and C disagree
     )
     (assert-equal test
                   219.96552790249206
                   (velocity 22.0 10.0 2.0)
                   "velocity 22 10 2 == 219.96552790249206"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   4953.939776453994
                   (acceleration 23.0 10.0 23.0)
                   "acceleration 23 10 23 == 4953.939776453994"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   -1088.989334933716
                   (acceleration 11.0 9.0 1.0)
                   "acceleration 11.0 9.0 1.0 == -1088.989334933716"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   94558.75
                   (kinetic-energy 10.0 23.0 6.0 0.5)
                   "kinetic-energy 10.0 23.0 6.0 0.5 == 94558.75"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   -177754.5
                   (kinetic-energy 100.0 9.0 1.0 6.7)
                   "kinetic-energy 100.0 9.0 1.0 6.7 == -177754.5"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   414.0
                   (potential-energy 23.0 10.0 0.6)
                   "potential-energy 23.0 10.0 0.6 == 414.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.18050000000000002
                   (potential-energy 10.0 19.0 0.01)
                   "potential-energy 10.0 19.0 0.01 == 0.18050000000000002"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   1103872.0
                   (net-energy 11.0 32.0 14.0)
                   "net-energy 11.0 32.0 14.0 == 1103872.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   72171.0
                   (net-energy 22.0 9.0 9.0)
                   "net-energy 22.0 9.0 9.0 == 72171.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   2619.0
                   (wave-speed 291.0 9.0)
                   "wave-speed 291 9 == 2619.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   551.0
                   (wave-speed 19.0 29.0)
                   "wave-speed 19.0 29.0 == 551.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   24.444444444444443
                   (refractive-index 11.0 9.0 20.0)
                   "refractive-index 11.0 9.0 20.0 == 24.444444444444443"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   14.482758620689655
                   (refractive-index 21.0 29.0 20.0)
                   "refractive-index 21.0 29.0 20.0 == 14.482758620689655"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.12708333333333333
                   (angular-resolution 20.0 192.0)
                   "angular-resolution 20.0 192.0 == 0.12708333333333333"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.546896551724138
                   (angular-resolution 13.0 29.0)
                   "angular-resolution 13.0 29.0 == 0.546896551724138"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   119.0
                   (beat-frequency 129.0 10.0)
                   "beat-frequency 129.0 10.0 == 119.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   9.0
                   (beat-frequency 12.0 3.0)
                   "beat-frequency 12.0 3.0 == 9.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   3.076923076923077
                   (harmonic-len 20.0 13.0)
                   "harmonic-len 20.0 13.0 == 3.076923076923077"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.1935483870967742
                   (harmonic-len 9.0 93.0)
                   "harmonic-len 9.0 93.0 == 0.1935483870967742"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   3.3333333333333335
                   (harmonic-freq 20.0 39.0 13.0)
                   "harmonic-freq 20.0 39.0 13.0 == 3.3333333333333335"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   11.709677419354838
                   (harmonic-freq 99.0 93.0 22.0)
                   "harmonic-freq 99.0 93.0 22.0 == 11.709677419354838"
-                  Double.=
-                  Double.str
     )
     (print-test-results test)))

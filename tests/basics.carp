@@ -10,42 +10,30 @@
                   -7.0
                   (changein 9.0 2.0)
                   "changein 9 2 == -7"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   2.0
                   (changein 0.0 2.0)
                   "changein 0 2 == -7"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   7.0
                   (changein 11.0 18.0)
                   "changein 11 18 == 7"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   -921.5
                   (changein 0.5 -921.0)
                   "changein 0.5 -921 == -921.5"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   23929.10
                   (twosig 23929.091020)
                   "twosig 23929.091020 == 23929.10"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   23929.20
                   (twosig 23929.2)
                   "twosig 23929.2 == 23929.20"
-                  Double.=
-                  Double.str
     )
     (print-test-results test)))

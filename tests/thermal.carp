@@ -10,105 +10,75 @@
                   4.5
                   (pressure 9.0 2.0)
                   "pressure 9.0 2.0 == 4.5"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.0
                   (pressure 0.0 2.0)
                   "pressure 0.0 2.0 == 0.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   -5130.0
                   (heat 9.0 19.0 34.0 4.0)
                   "heat 9.0 19.0 34.0 4.0 == -5130.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.0
                   (heat 0.0 2.0 19.0 25.0)
                   "heat 0.0 2.0 19.0 25.0 == 0.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   640.0
                   (latent-heat 20.0 32.0)
                   "latent-heat 20.0 32.0 == 640.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.0
                   (latent-heat 0.0 29.0)
                   "latent-heat 0.0 29.0 == 0.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   255981.24
                   (ideal-gas-pv 102.0 302.0)
                   "ideal-gas-pv 102.0 302.0 == 255981.24"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   -33738.6
                   (ideal-gas-pv 203.0 -20.0)
                   "ideal-gas-pv 203.0 -20.0 == -33738.6"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.0
                   (ideal-gas-pv 0.0 20.0)
                   "ideal-gas-pv 0.0 20.0 == 0.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   780.0
                   (work 3.9 192.0 392.0)
                   "work 3.9 192.0 392.0 == 780.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   401.8
                   (work 2.0 2.10 203.0)
                   "work 2.0 2.10 203.0 == 401.8"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   0.0
                   (work 0.0 0.0 0.0)
                   "work 0.0 0.0 0.0 == 0.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   62.8
                   (heat-change 19.2 32.0 50.0)
                   "heat-change 19.2 32.0 50.0 == 62.8"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   11.0
                   (heat-change 30.0 91.0 -50.0)
                   "heat-change 30.0 91.0 -50.0 == 11.0"
-                  Double.=
-                  Double.str
     )
     (assert-equal test
                   -40.0
                   (heat-change -30.0 -30.0 -40.0)
                   "heat-change -30.0 -30.0 -40.0 == -40.0"
-                  Double.=
-                  Double.str
     )
     (print-test-results test)))
