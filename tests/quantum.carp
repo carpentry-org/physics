@@ -8,142 +8,142 @@
   (with-test test
     (assert-equal test
                   180000000000000000.0
-                  (energy 2.0)
+                  (Quantum.energy 2.0)
                   "energy 2.0 == 180000000000000000.0"
     )
     (assert-equal test
                   1710000000000000000.0
-                  (energy 19.0)
+                  (Quantum.energy 19.0)
                   "energy 19.0 = 1710000000000000000.0"
     )
     (assert-equal test
                   0.000000000000000000000000000000007293
-                  (energy-light 11.0)
+                  (Quantum.energy-light 11.0)
                   "energy-light 11.0 == ε"
     )
     (assert-equal test
                   0.000000000000000000000000000000015248999999999998
-                  (energy-light 23.0)
+                  (Quantum.energy-light 23.0)
                   "energy-light 23.0 == ε"
     )
     (assert-equal test
                   0.0000000000000000000000000000000002882608695652174
-                  (momentum 2.3)
+                  (Quantum.momentum 2.3)
                   "momentum 2.3 == ε"
     )
     (assert-equal test
                   0.00000000000000000000000000000000016574999999999998
-                  (momentum 4.0)
+                  (Quantum.momentum 4.0)
                   "momentum 4.0 == ε"
     )
     (assert-equal test
                   0.000000000000000000000000000000000041437499999999994
-                  (de-broglie 16.0)
+                  (Quantum.de-broglie 16.0)
                   "de-broglie 16.0 == ε"
     )
     (assert-equal test
                   0.000000000000000000000000000000000027624999999999996
-                  (de-broglie 24.0)
+                  (Quantum.de-broglie 24.0)
                   "de-broglie 24.0 == ε"
     )
     (assert-equal test
                   0.00000000000000000000000000000000018193056425849413
-                  (unc-position 0.29)
+                  (Quantum.unc-position 0.29)
                   "unc-position 0.29 == ε"
     )
     (assert-equal test
                   0.000000000000000000000000000000000027479095643210055
-                  (unc-position 1.920)
+                  (Quantum.unc-position 1.920)
                   "unc-position 1.920 == ε"
     )
     (assert-equal test
                   0.00000000000000000000000000000000018193056425849413
-                  (unc-position 0.29)
+                  (Quantum.unc-position 0.29)
                   "unc-position 0.29 == 0.00000000000000000000000000000000018193056425849413"
     )
     (assert-equal test
                   0.000000000000000000000000000000000027479095643210055
-                  (unc-position 1.920)
+                  (Quantum.unc-position 1.920)
                   "unc-position 1.920 == 0.000000000000000000000000000000000027479095643210055"
     )
     (assert-equal test
                   -14.0
-                  (max-kinetic-energy 14.0 23.0)
+                  (Quantum.max-kinetic-energy 14.0 23.0)
                   "max-kinetic-energy 14.0 23.0 == -14.0"
     )
     (assert-equal test
                   -8.0
-                  (max-kinetic-energy 8.0 0.10)
+                  (Quantum.max-kinetic-energy 8.0 0.10)
                   "max-kinetic-energy 8.0 0.10 == -8.0"
     )
     (assert-equal test
                   0.000000000000000000000000000000007293
-                  (min-work 11.0)
+                  (Quantum.min-work 11.0)
                   "min-work 11.0 == 0.000000000000000000000000000000007293"
     )
     (assert-equal test
                   0.000000000000000000000000000000015248999999999998
-                  (min-work 23.0)
+                  (Quantum.min-work 23.0)
                   "min-work 23.0 == 0.000000000000000000000000000000015248999999999998"
     )
     (assert-equal test
                   16591251885369534000000000000000000.0
-                  (threshold-freq 11.0)
+                  (Quantum.threshold-freq 11.0)
                   "threshold-freq 11.0 == 16591251885369534000000000000000000.0"
     )
     (assert-equal test
                   34690799396681755000000000000000000.0
-                  (threshold-freq 23.0)
+                  (Quantum.threshold-freq 23.0)
                   "threshold-freq 23.0 == 34690799396681755000000000000000000.0"
     )
     (assert-equal test
                   0.00000000000000000000000000000000000000000000000000000000000000000000006783472222222221
-                  (energy-levels 1.0 10.0 9.0)
+                  (Quantum.energy-levels 1.0 10.0 9.0)
                   "energy-levels 1.0 10.0 9.0 == 0.00000000000000000000000000000000000000000000000000000000000000000000006783472222222221"
     )
     (assert-equal test
                   0.0000000000000000000000000000000000000000000000000000000000000000000011447109374999997
-                  (energy-levels 2.0 12.0 4.0)
+                  (Quantum.energy-levels 2.0 12.0 4.0)
                   "energy-levels 2.0 12.0 4.0 == 0.0000000000000000000000000000000000000000000000000000000000000000000011447109374999997"
     )
     (assert-equal test
                   0.0
-                  (decay 2010.0 200.0 9.0)
+                  (Quantum.decay 2010.0 200.0 9.0)
                   "decay 2010.0 200.0 9.0 == 0.0"
     )
     (assert-equal test
                   0.2706705664732254
-                  (decay 2.0 0.10 20.0)
+                  (Quantum.decay 2.0 0.10 20.0)
                   "decay 2.0 0.10 20.0 == 0.2706705664732254"
     )
     (assert-equal test
                   0.030136833937388925
-                  (half-life 23.0)
+                  (Quantum.half-life 23.0)
                   "half-life 23.0 == 0.030136833937388925"
     )
     (assert-equal test
                   0.06301338005090412
-                  (half-life 11.0)
+                  (Quantum.half-life 11.0)
                   "half-life 11.0 == 0.06301338005090412"
     )
     (assert-equal test
                   46230.0
-                  (activity 2010.0 23.0)
+                  (Quantum.activity 2010.0 23.0)
                   "activity 2010.0 23.0 == 46230.0"
     )
     (assert-equal test
                   22.0
-                  (activity 2.0 11.0)
+                  (Quantum.activity 2.0 11.0)
                   "activity 2.0 11.0 == 22.0"
     )
     (assert-equal test
                   1.5993473502461082
-                  (activity-e 2010.0 0.25 23.0)
+                  (Quantum.activity-e 2010.0 0.25 23.0)
                   "activity-e 2010.0 0.25 23.0 == 1.5993473502461082"
     )
     (assert-equal test
                   0.000004441442874196583
-                  (activity-e 2.0 1.2 11.0)
+                  (Quantum.activity-e 2.0 1.2 11.0)
                   "activity-e 2.0 1.2 11.0 == 0.000004441442874196583"
     )
     (print-test-results test)))

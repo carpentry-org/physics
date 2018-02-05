@@ -8,122 +8,122 @@
   (with-test test
     (assert-equal test
                   0.00000000001482222222222222
-                  (gravitational-force 1.0 2.0 3.0)
+                  (Fields.gravitational-force 1.0 2.0 3.0)
                   "gravitational-force 1 2 3 == 0.00000000001482222222222222"
     )
     (assert-equal test
                   0.000000080890425
-                  (gravitational-force 21.0 231.0 2.0)
+                  (Fields.gravitational-force 21.0 231.0 2.0)
                   "gravitational-force 21 231 4 == 0.0000000080890425"
     )
     (assert-equal test
                   2809374999.9999995
-                  (coulomb-force 1.6 2.0 3.2)
+                  (Fields.coulomb-force 1.6 2.0 3.2)
                   "coulomb-force 1.6 2 3.2 == 2809374999.9999995"
     )
     (assert-equal test
                   312049586776.8595
-                  (coulomb-force 21.0 2.0 1.1)
+                  (Fields.coulomb-force 21.0 2.0 1.1)
                   "coulomb-force 21 2 1.1 == 312049586776.8595"
     )
     (assert-equal test
                   0.10526315789473684
-                  (gravitational-acceleration 2.0 19.0)
+                  (Fields.gravitational-acceleration 2.0 19.0)
                   "gravitational-acceleration 2 19 == 0.10526315789473684"
     )
     (assert-equal test
                   2.8947368421052633
-                  (gravitational-acceleration 55.0 19.0)
+                  (Fields.gravitational-acceleration 55.0 19.0)
                   "gravitational-acceleration 55 19 == 2.8947368421052633"
     )
     (assert-equal test
                   0.19387755102040816
-                  (electric-field 19.0 98.0)
+                  (Fields.electric-field 19.0 98.0)
                   "electric-field 19 98 == 0.19387755102040816"
     )
     (assert-equal test
                   0.008130081300813009
-                  (electric-field 1.0 123.0)
+                  (Fields.electric-field 1.0 123.0)
                   "electric-field 1 123 == 0.008130081300813009"
     )
     (assert-equal test
                   -0.8586956521739131
-                  (grad-electric-field 19.0 98.0 100.0 192.0)
+                  (Fields.grad-electric-field 19.0 98.0 100.0 192.0)
                   "grad-electric-field 19 98 100 192 == -0.8586956521739131"
     )
     (assert-equal test
                   0.10638297872340426
-                  (grad-electric-field 24.0 29.0 66.0 19.0)
+                  (Fields.grad-electric-field 24.0 29.0 66.0 19.0)
                   "grad-electric-field 24 29 66 19 == 0.10638297872340426"
     )
     (assert-equal test
                   12673.0
-                  (particle-magnetic-force 19.0 29.0 23.0 90.0)
+                  (Fields.particle-magnetic-force 19.0 29.0 23.0 90.0)
                   "particle-magnetic-force 19 29 23 90 == 12673"
     )
     (assert-equal test
                   5.926130043570827
-                  (particle-magnetic-force 1.0 2.0 3.0 81.0)
+                  (Fields.particle-magnetic-force 1.0 2.0 3.0 81.0)
                   "particle-magnetic-force 1 2 3 81 == 5.926130043570827"
     )
     (assert-equal test
                   216.20000000000002
-                  (conductor-magnetic-force 23.0 1.0 9.4 90.0)
+                  (Fields.conductor-magnetic-force 23.0 1.0 9.4 90.0)
                   "conductor-magnetic-force 23 1 9.4 90 == 216.20000000000002"
     )
     (assert-equal test
                   153.69418268000936
-                  (conductor-magnetic-force 19.0 2.1 3.9 81.0)
+                  (Fields.conductor-magnetic-force 19.0 2.1 3.9 81.0)
                   "conductor-magnetic-force 19 2.1 3.9 81 == 153.69418268000936"
     )
     (assert-equal test
                   -0.00000000010005
-                  (particle-gravitational-potential-energy 2.0 3.0 4.0)
+                  (Fields.particle-gravitational-potential-energy 2.0 3.0 4.0)
                   "particle-gravitational-potential-energy 2 3 4 == -0.00000000010005"
     )
     (assert-equal test
                   -0.000000000133735175879397
-                  (particle-gravitational-potential-energy 19.0 21.0 199.0)
+                  (Fields.particle-gravitational-potential-energy 19.0 21.0 199.0)
                   "particle-gravitational-potential-energy 19 21 199 == -0.000000000133735175879397"
     )
     (assert-equal test
                   -0.00000000002106315789473684
-                  (gravitational-potential-energy 6.0 19.0)
+                  (Fields.gravitational-potential-energy 6.0 19.0)
                   "gravitational-potential-energy 6 19 == -0.00000000002106315789473684"
     )
     (assert-equal test
                   -0.00000000003335
-                  (gravitational-potential-energy 2.0 4.0)
+                  (Fields.gravitational-potential-energy 2.0 4.0)
                   "gravitational-potential-energy 2 4 == -0.00000000003335"
     )
     (assert-equal test
                   0.000030331501776206202
-                  (escape-velocity 200.0 29.0)
+                  (Fields.escape-velocity 200.0 29.0)
                   "escape-velocity 200 29 == 0.000030331501776206202"
     )
     (assert-equal test
                   0.00004912562745377684
-                  (escape-velocity 199.0 11.0)
+                  (Fields.escape-velocity 199.0 11.0)
                   "escape-velocity 199 11 == 0.00004912562745377684"
     )
     (assert-equal test
                   2370090909090.909
-                  (charge-electric-potential-energy 200.0 29.0 22.0)
+                  (Fields.charge-electric-potential-energy 200.0 29.0 22.0)
                   "charge-electric-potential-energy 200 29 22 == 2370090909090.909"
     )
     (assert-equal test
                   285204492753.6232
-                  (charge-electric-potential-energy 199.0 11.0 69.0)
+                  (Fields.charge-electric-potential-energy 199.0 11.0 69.0)
                   "charge-electric-potential-energy 199 11 69 == 285204492753.6232"
     )
     (assert-equal test
                   269700000000.0
-                  (electric-potential-energy 60.0 2.0)
+                  (Fields.electric-potential-energy 60.0 2.0)
                   "electric-potential-energy 60 2 == 269700000000"
     )
     (assert-equal test
                   21975555555.555557
-                  (electric-potential-energy 22.0 9.0)
+                  (Fields.electric-potential-energy 22.0 9.0)
                   "electric-potential-energy 22 9 == 21975555555.555557"
     )
     (print-test-results test)))

@@ -8,57 +8,57 @@
   (with-test test
     (assert-equal test
                   192.0
-                  (power 2.0 3.0 4.0)
+                  (Energy.power 2.0 3.0 4.0)
                   "power 2 3 4 == 192"
     )
     (assert-equal test
                   49248.0
-                  (power 3.0 19.0 12.0)
+                  (Energy.power 3.0 19.0 12.0)
                   "power 3 19 21 == 49248"
     )
     (assert-equal test
                   470.88
-                  (power-length 2.0 3.0 8.0)
+                  (Energy.power-length 2.0 3.0 8.0)
                   "power-length 2 3 8 == 470.88"
     )
     (assert-equal test
                   17750199.285
-                  (power-length 91.0 23.0 19.0)
+                  (Energy.power-length 91.0 23.0 19.0)
                   "power-length 91 23 19 == 17750199.285"
     )
     (assert-equal test
                   0.10526315789473684
-                  (intensity 2.0 19.0)
+                  (Energy.intensity 2.0 19.0)
                   "intensity 2 19 == 0.10526315789473684"
     )
     (assert-equal test
                   0.1414141414141414
-                  (intensity 14.0 99.0)
+                  (Energy.intensity 14.0 99.0)
                   "intensity 14 99 == 0.1414141414141414"
     )
     (assert-equal test
                   2.0
-                  (albedo 4.0 2.0)
+                  (Energy.albedo 4.0 2.0)
                   "albedo 4 2 == 2"
     )
     (assert-equal test
                   2.0
-                  (albedo 11.0 5.5)
+                  (Energy.albedo 11.0 5.5)
                   "albedo 11 5.5 == 2"
     )
     (assert-equal test
                   20.0
-                  (transfer-surface 4.0 5.0 6.0 7.0)
+                  (Energy.transfer-surface 4.0 5.0 6.0 7.0)
                   "transfer-surface 4 5 6 7 == 20"
     )
     (assert-equal test
                   3990.0
-                  (transfer-surface 19.0 21.0 99.0 109.0)
+                  (Energy.transfer-surface 19.0 21.0 99.0 109.0)
                   "transfer-surface 19 21 99 109 == 3990"
     )
     (assert-equal test
                   0.8
-                  (surface-heat 4.0 5.0 19.0 20.0)
+                  (Energy.surface-heat 4.0 5.0 19.0 20.0)
                   "surface-heat 4 5 19 20 == 0.8"
     )
     (print-test-results test)))

@@ -8,138 +8,138 @@
   (with-test test
     (assert-equal test
                   18.0
-                  (kinetic 9.0 2.0)
+                  (Electromagnetic.kinetic 9.0 2.0)
                   "kinetic 9 2 == 18"
     )
     (assert-equal test
                   0.0
-                  (kinetic 0.0 2.0)
+                  (Electromagnetic.kinetic 0.0 2.0)
                   "kinetic 0 2 == 0"
     )
     (assert-equal test
                   0.17647058823529413
-                  (current 1.0 4.0 92.0 109.0)
+                  (Electromagnetic.current 1.0 4.0 92.0 109.0)
                   "current 1 4 92 109 == 0.17647058823529413"
     )
     (assert-equal test
                   0.95
-                  (current 10.0 -9.0 20.0 0.0)
+                  (Electromagnetic.current 10.0 -9.0 20.0 0.0)
                   "current 10 -9 20 0 == 0.95"
     )
     (assert-equal test
                   0.95
-                  (current 10.0 -9.0 20.0 0.0)
+                  (Electromagnetic.current 10.0 -9.0 20.0 0.0)
                   "current 10 -9 20 0 == 0.95"
     )
     (assert-equal test
                   0.2222222222222222
-                  (ohmic-resistance 2.0 9.0)
+                  (Electromagnetic.ohmic-resistance 2.0 9.0)
                   "ohmic-resistance 2 9 == 0.2222222222222222"
     )
     (assert-equal test
                   0.2
-                  (ohmic-resistance 0.1 0.5)
+                  (Electromagnetic.ohmic-resistance 0.1 0.5)
                   "ohmic-resistance 0.1 0.5 == 0.2"
     )
     (assert-equal test
                   5.454545454545454
-                  (resistivity 3.0 11.0 20.0)
+                  (Electromagnetic.resistivity 3.0 11.0 20.0)
                   "resistivity 3 11 20 == 5.454545454545454"
     )
     (assert-equal test
                   -1170.0
-                  (resistivity -9.0 0.1 13.0)
+                  (Electromagnetic.resistivity -9.0 0.1 13.0)
                   "resistivity -9 0.1 13 == -1170"
     )
     (assert-equal test
                   312.0
-                  (vi-power 13.0 24.0)
+                  (Electromagnetic.vi-power 13.0 24.0)
                   "vi-power 13 24 == 312"
     )
     (assert-equal test
                   -108.0
-                  (vi-power -9.0 12.0)
+                  (Electromagnetic.vi-power -9.0 12.0)
                   "vi-power -9 12 == -108"
     )
     (assert-equal test
                   5315961.0
-                  (ir-power 203.0 129.0)
+                  (Electromagnetic.ir-power 203.0 129.0)
                   "ir-power 203 129 == -5315961"
     )
     (assert-equal test
                   -7569.0
-                  (ir-power 29.0 -9.0)
+                  (Electromagnetic.ir-power 29.0 -9.0)
                   "ir-power 29 -9 == -7569"
     )
     (assert-equal test
                   2.0
-                  (v-power 2.0 2.0)
+                  (Electromagnetic.v-power 2.0 2.0)
                   "v-power 2 2 == 2"
     )
     (assert-equal test
                   1.0475059382422802
-                  (v-power 21.0 421.0)
+                  (Electromagnetic.v-power 21.0 421.0)
                   "v-power 21^2 421 == 1.0475059382422802"
     )
     (assert-equal test
                   2604.0
-                  (emf 21.0 32.0 92.0)
+                  (Electromagnetic.emf 21.0 32.0 92.0)
                   "emf 21 32 92 == 2604"
     )
     (assert-equal test
                   0.0
-                  (emf 92.0 9.0 -9.0)
+                  (Electromagnetic.emf 92.0 9.0 -9.0)
                   "emf 92 9 -9 == 0.0"
     )
     (assert-equal test
                   15.0
-                  (series &[1.0 2.0 3.0 4.0 5.0])
+                  (Electromagnetic.series &[1.0 2.0 3.0 4.0 5.0])
                   "series [1 2 3 4 5] == 15"
     )
     (assert-equal test
                   566.0
-                  (series &[92.0 90.0 293.0 91.0])
+                  (Electromagnetic.series &[92.0 90.0 293.0 91.0])
                   "series [92 90 293 91] == 566"
     )
     (assert-op test
                0.000000000000005633189227582935
-               (flux-component 23.0 4.0 90.0)
+               (Electromagnetic.flux-component 23.0 4.0 90.0)
                "flux-component 23 4 90 == 0.000000000000005633189227582935"
                Double.approx ; TODO: cos in JS and C disagree
     )
     (assert-equal test
                   -1152.0
-                  (flux-component 192.0 6.0 180.0)
+                  (Electromagnetic.flux-component 192.0 6.0 180.0)
                   "flux-component 192 6 180 == -1152"
     )
     (assert-equal test
                   72.0
-                  (induced-emf 18.0 4.0 1.0)
+                  (Electromagnetic.induced-emf 18.0 4.0 1.0)
                   "induced-emf 18 4 1 == 72"
     )
     (assert-equal test
                   512.0
-                  (induced-emf 32.0 8.0 2.0)
+                  (Electromagnetic.induced-emf 32.0 8.0 2.0)
                   "induced-emf 32 8 2 == 512"
     )
     (assert-equal test
                   0.000000022246941045606228
-                  (gauss 200.0)
+                  (Electromagnetic.gauss 200.0)
                   "gauss 200.0 == 0.000000022246941045606228"
     )
     (assert-equal test
                   0.0000000010011123470522803
-                  (gauss 9.0)
+                  (Electromagnetic.gauss 9.0)
                   "gauss 9.0 == 0.0000000010011123470522803"
     )
     (assert-equal test
                   -17.9
-                  (coil-emf 1.0 1.1 19.0 21.0 22.0)
+                  (Electromagnetic.coil-emf 1.0 1.1 19.0 21.0 22.0)
                   "coil-emf 1 1.1 19 21 22 == -17.9"
     )
     (assert-equal test
                   -1.3749999999999998
-                  (coil-emf 10.0 1.2 2.3 1.0 9.0)
+                  (Electromagnetic.coil-emf 10.0 1.2 2.3 1.0 9.0)
                   "coil-emf 10 1.2 2.3 1 9 == -1.374999999999998"
     )
     (print-test-results test)))

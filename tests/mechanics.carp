@@ -8,207 +8,207 @@
   (with-test test
     (assert-equal test
                   18.0
-                  (momentum 9.0 2.0)
+                  (Mechanics.momentum 9.0 2.0)
                   "momentum 9.0 2.0 == 18.0"
     )
     (assert-equal test
                   0.0
-                  (momentum 0.0 2.0)
+                  (Mechanics.momentum 0.0 2.0)
                   "momentum 0.0 2.0 == 0.0"
     )
     (assert-equal test
                   18.0
-                  (momentum -9.0 -2.0)
+                  (Mechanics.momentum -9.0 -2.0)
                   "momentum -9.0 -2.0 == 18.0"
     )
     (assert-equal test
                   2.0
-                  (momentum -1.0 -2.0)
+                  (Mechanics.momentum -1.0 -2.0)
                   "momentum -1.0 -2.0 == 2.0"
     )
     (assert-equal test
                   -18.0
-                  (momentum -9.0 2.0)
+                  (Mechanics.momentum -9.0 2.0)
                   "momentum -9.0 2.0 == -18.0"
     )
     (assert-equal test
                   -2.0
-                  (momentum -1.0 2.0)
+                  (Mechanics.momentum -1.0 2.0)
                   "momentum -1.0 2.0 == -2.0"
     )
     (assert-op test
                49.05
-               (force 5.0)
+               (Mechanics.force 5.0)
                "force 5.0 == 49.05"
                Double.approx
     )
     (assert-op test
                88.29
-               (force 9.0)
+               (Mechanics.force 9.0)
                "force 9.0 == 88.29"
                Double.approx
     )
     (assert-op test
                   -49.05
-                  (force -5.0)
+                  (Mechanics.force -5.0)
                   "force -5.0 == -49.05"
                   Double.approx
     )
     (assert-op test
                   -88.29
-                  (force -9.0)
+                  (Mechanics.force -9.0)
                   "force -9.0 == -88.29"
                   Double.approx
     )
     (assert-equal test
                   10.0
-                  (force-momentum 1.0 2.0 3.0 4.0 5.0 6.0)
+                  (Mechanics.force-momentum 1.0 2.0 3.0 4.0 5.0 6.0)
                   "force-momentum 1.0 2.0 3.0 4.0 5.0 6.0 == 10.0"
     )
     (assert-equal test
                   280.70
-                  (force-momentum 291.0 300.0 400.0 920.0 1000.0 2000.0)
+                  (Mechanics.force-momentum 291.0 300.0 400.0 920.0 1000.0 2000.0)
                   "force-momentum 291.0 300.0 400.0 920.0 1000.0 2000.0 == 280.70"
     )
     (assert-equal test
                   3686.0
-                  (suvat-uta 4.0 19.0 20.0)
+                  (Mechanics.suvat-uta 4.0 19.0 20.0)
                   "suvat-uta 4.0 19.0 20.0 == 3686.0"
     )
     (assert-equal test
                   6825.0
-                  (suvat-uta 10.0 21.0 30.0)
+                  (Mechanics.suvat-uta 10.0 21.0 30.0)
                   "suvat-uta 10.0 21.0 30.0 == 6825.0"
     )
     (assert-equal test
                   300.0
-                  (suvat-uvt 0.0 30.0 20.0)
+                  (Mechanics.suvat-uvt 0.0 30.0 20.0)
                   "suvat-uvt 0.0 30.0 20.0 == 300.0"
     )
     (assert-equal test
                   3072.0
-                  (suvat-uvt 0.0 192.0 32.0)
+                  (Mechanics.suvat-uvt 0.0 192.0 32.0)
                   "suvat-uvt 0.0 192.0 32.0 == 3072.0"
     )
     (assert-equal test
                   -5120.0
-                  (suvat-vta 0.0 32.0 10.0)
+                  (Mechanics.suvat-vta 0.0 32.0 10.0)
                   "suvat-vta 0.0 32.0 10.0 = -5120.0"
     )
     (assert-equal test
                   5120.0
-                  (suvat-vta 0.0 32.0 -10.0)
-                  "suvat-vta (0.0 32.0 -10) == 5120.0"
+                  (Mechanics.suvat-vta 0.0 32.0 -10.0)
+                  "suvat-vta (Mechanics.0.0 32.0 -10) == 5120.0"
     )
     (assert-equal test
                   288.0
-                  (suvat-uat 0.0 9.0 32.0)
+                  (Mechanics.suvat-uat 0.0 9.0 32.0)
                   "suvat-uat 0.0 9.0 32.0 == 288.0"
     )
     (assert-equal test
                   180.0
-                  (suvat-uat 0.0 9.0 20.0)
+                  (Mechanics.suvat-uat 0.0 9.0 20.0)
                   "suvat-uat 0.0 9.0 20.0 == 180.0"
     )
     (assert-equal test
                   3924.0
-                  (suvat-uas 0.0 9.81 200.0)
+                  (Mechanics.suvat-uas 0.0 9.81 200.0)
                   "suvat-uas 0.0 9.81 200.0 == 3924.0"
     )
     (assert-equal test
                   178385.04
-                  (suvat-uas 0.0 9.81 9092.0)
+                  (Mechanics.suvat-uas 0.0 9.81 9092.0)
                   "suvat-uas 0.0 9.81 9092.0 == 178385.04"
     )
     (assert-equal test
                   100.0
-                  (impulse-mass 10.0 11.0 21.0)
+                  (Mechanics.impulse-mass 10.0 11.0 21.0)
                   "impulse-mass 10.0 11.0 21.0 == 100.0"
     )
     (assert-equal test
                   140097.0
-                  (impulse-mass 201.0 203.0 900.0)
+                  (Mechanics.impulse-mass 201.0 203.0 900.0)
                   "impulse-mass 201.0 203.0 900.0 == 140097.0"
     )
     (assert-equal test
                   1500.0
-                  (impulse-force 300.0 0.0 5.0)
+                  (Mechanics.impulse-force 300.0 0.0 5.0)
                   "impulse-force 300.0 0.0 5.0 == 1500.0"
     )
     (assert-equal test
                   15000.0
-                  (impulse-force 500.0 0.0 30.0)
+                  (Mechanics.impulse-force 500.0 0.0 30.0)
                   "impulse-force 500.0 0.0 30.0 == 15000.0"
     )
     (assert-equal test
                   0.0
-                  (work-done 300.0 0.0 60.0)
+                  (Mechanics.work-done 300.0 0.0 60.0)
                   "work-done 300.0 0.0 60.0 == 0.0"
     )
     (assert-equal test
                   90.18
-                  (twosig (work-done 10.0 30.0 49.0))
+                  (Basics.twosig (Mechanics.work-done 10.0 30.0 49.0))
                   "work-done 10.0 30.0 49.0 == 90.18"
     )
     (assert-equal test
                   22500.0
-                  (kinetic-velocity 30.0 50.0)
+                  (Mechanics.kinetic-velocity 30.0 50.0)
                   "kinetic-velocity 30.0 50.0 == 22500.0"
     )
     (assert-equal test
                   1000.0
-                  (kinetic-velocity 10.0 20.0)
+                  (Mechanics.kinetic-velocity 10.0 20.0)
                   "kinetic-velocity 10.0 20.0 == 1000.0"
     )
     (assert-equal test
                   450000.0
-                  (kinetic-momentum 100.0 90.0)
+                  (Mechanics.kinetic-momentum 100.0 90.0)
                   "kinetic-momentum 100.0 90.0 == 450000.0"
     )
     (assert-equal test
                   2864430.0
-                  (kinetic-momentum 309.0 60.0)
+                  (Mechanics.kinetic-momentum 309.0 60.0)
                   "kinetic-momentum 309.0 60.0 == 2864430.0"
     )
     (assert-equal test
                   33844.50
-                  (potential 69.0 40.0 90.0)
+                  (Mechanics.potential 69.0 40.0 90.0)
                   "potential 69.0 40.0 90.0 == 33844.50"
     )
     (assert-equal test
                   38455.20
-                  (potential 98.0 60.0 100.0)
+                  (Mechanics.potential 98.0 60.0 100.0)
                   "potential 98.0 60.0 100.0 == 38455.20"
     )
     (assert-equal test
                   2000.0
-                  (power 50.0 40.0)
+                  (Mechanics.power 50.0 40.0)
                   "power 50.0 40.0 == 2000.0"
     )
     (assert-equal test
                   1000.0
-                  (power 20.0 50.0)
+                  (Mechanics.power 20.0 50.0)
                   "power 20.0 50.0 == 1000.0"
     )
     (assert-equal test
                   4.45
-                  (twosig (centripetal-velocity 20.0 90.0))
+                  (Basics.twosig (Mechanics.centripetal-velocity 20.0 90.0))
                   "centripetal-velocity 20.0 90.0 == 4.44"
     )
     (assert-equal test
                   40.0
-                  (centripetal-velocity 40.0 40.0)
+                  (Mechanics.centripetal-velocity 40.0 40.0)
                   "centripetal-velocity 40.0 40.0 == 40.0"
     )
     (assert-op test
                178.01
-               (twosig (centripetal-time 0.5 0.333))
+               (Basics.twosig (Mechanics.centripetal-time 0.5 0.333))
                "centripetal-time 0.5 0.333 == 178.01"
                Double.approx
     )
     (assert-op test
                1.51435
-               (centripetal-time 92.1 49.0)
+               (Mechanics.centripetal-time 92.1 49.0)
                "centripetal-time 92.1 49.0 == 1.51"
                Double.approx
     )
