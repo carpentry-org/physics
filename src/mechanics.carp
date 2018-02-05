@@ -60,5 +60,5 @@
     (/ (pow v 2.0) r))
 
   (defn centripetal-time [r t]
-    (/ (* (* 4.0 (pow π 2.0)) r) (pow t 2.0)))
+    (/ (* (* 4.0 (pow pi 2.0)) r) (pow t 2.0)))
 )

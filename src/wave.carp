@@ -12,7 +12,7 @@
 (defmodule Wave
 
   (defn angular-frequency [t]
-    (/ (* 2.0 π) t))
+    (/ (* 2.0 pi) t))
 
   (defn displacement [a w t]
     (* a (sin (* w t))))

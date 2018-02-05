@@ -24,10 +24,10 @@
     (/ (plancks-constant) p))
 
   (defn unc-position [dmomentum]
-    (/ (plancks-constant) (* (* 4.0 π) dmomentum)))
+    (/ (plancks-constant) (* (* 4.0 pi) dmomentum)))
 
   (defn unc-momentum [dposition]
-    (/ (plancks-constant) (* (* 4.0 π) dposition)))
+    (/ (plancks-constant) (* (* 4.0 pi) dposition)))
 
   (defn max-kinetic-energy [w f]
     (- (* (plancks-constant) f) w))

@@ -39,14 +39,14 @@
     (let [x 0.0]
       (do
         (for [i 0 (Array.count resistances)]
-          (set! &x (+ x @(Array.nth resistances i))))
+          (set! x (+ x @(Array.nth resistances i))))
         x)))
 
   (defn parallel [resistances]
     (let [x 0.0]
       (do
         (for [i 0 (Array.count resistances)]
-          (set! &x (+ x (/ 1.0 @(Array.nth resistances i)))))
+          (set! x (+ x (/ 1.0 @(Array.nth resistances i)))))
         (/ 1.0 x))))
 
   (defn flux-component [b a theta]
