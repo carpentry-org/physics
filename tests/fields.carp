@@ -125,5 +125,4 @@
                   21975555555.555557
                   (Fields.electric-potential-energy 22.0 9.0)
                   "electric-potential-energy 22 9 == 21975555555.555557"
-    )
-    (print-test-results test)))
+    )))

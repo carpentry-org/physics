@@ -35,5 +35,4 @@
                   23929.20
                   (Basics.twosig 23929.2)
                   "twosig 23929.2 == 23929.20"
-    )
-    (print-test-results test)))
+    )))

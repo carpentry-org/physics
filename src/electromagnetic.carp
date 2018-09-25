@@ -36,18 +36,10 @@
     (* i (+ r rs)))
 
   (defn series [resistances]
-    (let [x 0.0]
-      (do
-        (for [i 0 (Array.count resistances)]
-          (set! x (+ x @(Array.nth resistances i))))
-        x)))
+    (Array.sum resistances))
 
   (defn parallel [resistances]
-    (let [x 0.0]
-      (do
-        (for [i 0 (Array.count resistances)]
-          (set! x (+ x (/ 1.0 @(Array.nth resistances i)))))
-        (/ 1.0 x))))
+    (Array.reduce (fn [x y] (+ @x (/ 1.0 @y))) 0.0 resistances))
 
   (defn flux-component [b a theta]
     (* (* b a) (cos (Geometry.degree-to-radians theta))))

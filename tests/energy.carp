@@ -60,5 +60,4 @@
                   0.8
                   (Energy.surface-heat 4.0 5.0 19.0 20.0)
                   "surface-heat 4 5 19 20 == 0.8"
-    )
-    (print-test-results test)))
+    )))

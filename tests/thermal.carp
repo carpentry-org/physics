@@ -80,5 +80,4 @@
                   -40.0
                   (Thermal.heat-change -30.0 -30.0 -40.0)
                   "heat-change -30.0 -30.0 -40.0 == -40.0"
-    )
-    (print-test-results test)))
+    )))

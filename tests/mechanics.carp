@@ -211,5 +211,4 @@
                (Mechanics.centripetal-time 92.1 49.0)
                "centripetal-time 92.1 49.0 == 1.51"
                Double.approx
-    )
-    (print-test-results test)))
+    )))
