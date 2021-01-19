@@ -39,7 +39,7 @@
     (Array.sum resistances))
 
   (defn parallel [resistances]
-    (Array.reduce (fn [x y] (+ @x (/ 1.0 @y))) 0.0 resistances))
+    (Array.reduce &(fn [x y] (+ x (/ 1.0 @y))) 0.0 resistances))
 
   (defn flux-component [b a theta]
     (* (* b a) (cos (Geometry.degree-to-radians theta))))
