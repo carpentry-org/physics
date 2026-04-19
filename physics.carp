@@ -14,7 +14,7 @@
   (load "src/fields.carp")
   (use Fields)
 
-  (load "src/Mechanics.carp")
+  (load "src/mechanics.carp")
   (use Mechanics)
 
   (load "src/multipliers.carp")
