@@ -30,5 +30,4 @@
   (use Units)
 
   (load "src/wave.carp")
-  (use Wave)
-)
+  (use Wave))

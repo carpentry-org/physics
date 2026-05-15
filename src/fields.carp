@@ -12,18 +12,15 @@
 (use Units)
 
 (defmodule Fields
-
   (defn gravitational-force [mone mtwo r]
     (* (gravitational-constant) (/ (* mone mtwo) (pow r 2.0))))
 
   (defn coulomb-force [qone qtwo r]
     (* (coulomb-constant) (/ (* qone qtwo) (pow r 2.0))))
 
-  (defn gravitational-acceleration [f m]
-    (/ f m))
+  (defn gravitational-acceleration [f m] (/ f m))
 
-  (defn electric-field [f q]
-    (/ f q))
+  (defn electric-field [f q] (/ f q))
 
   (defn grad-electric-field [v1 v2 x1 x2]
     (/ (* -1.0 (changein v1 v2)) (changein x1 x2)))
@@ -49,6 +46,4 @@
   (defn charge-electric-potential-energy [mq q r]
     (* (coulomb-constant) (/ (* mq q) r)))
 
-  (defn electric-potential-energy [q r]
-    (* (coulomb-constant) (/ q r)))
-)
+  (defn electric-potential-energy [q r] (* (coulomb-constant) (/ q r))))
