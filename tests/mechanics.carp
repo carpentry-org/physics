@@ -30,30 +30,26 @@
       -2.0
       (Mechanics.momentum -1.0 2.0)
       "momentum -1.0 2.0 == -2.0")
-    (assert-op
-      test
-      49.05
-      (Mechanics.force 5.0)
-      "force 5.0 == 49.05"
-      Double.approx)
-    (assert-op
-      test
-      88.29
-      (Mechanics.force 9.0)
-      "force 9.0 == 88.29"
-      Double.approx)
-    (assert-op
-      test
-      -49.05
-      (Mechanics.force -5.0)
-      "force -5.0 == -49.05"
-      Double.approx)
-    (assert-op
-      test
-      -88.29
-      (Mechanics.force -9.0)
-      "force -9.0 == -88.29"
-      Double.approx)
+    (assert-op test
+               49.05
+               (Mechanics.force 5.0)
+               "force 5.0 == 49.05"
+               Double.approx)
+    (assert-op test
+               88.29
+               (Mechanics.force 9.0)
+               "force 9.0 == 88.29"
+               Double.approx)
+    (assert-op test
+               -49.05
+               (Mechanics.force -5.0)
+               "force -5.0 == -49.05"
+               Double.approx)
+    (assert-op test
+               -88.29
+               (Mechanics.force -9.0)
+               "force -9.0 == -88.29"
+               Double.approx)
     (assert-equal test
       10.0
       (Mechanics.force-momentum 1.0 2.0 3.0 4.0 5.0 6.0)
@@ -166,15 +162,13 @@
       40.0
       (Mechanics.centripetal-velocity 40.0 40.0)
       "centripetal-velocity 40.0 40.0 == 40.0")
-    (assert-op
-      test
-      178.01
-      (Basics.twosig (Mechanics.centripetal-time 0.5 0.333))
-      "centripetal-time 0.5 0.333 == 178.01"
-      Double.approx)
-    (assert-op
-      test
-      1.51435
-      (Mechanics.centripetal-time 92.1 49.0)
-      "centripetal-time 92.1 49.0 == 1.51"
-      Double.approx)))
+    (assert-op test
+               178.01
+               (Basics.twosig (Mechanics.centripetal-time 0.5 0.333))
+               "centripetal-time 0.5 0.333 == 178.01"
+               Double.approx)
+    (assert-op test
+               1.51435
+               (Mechanics.centripetal-time 92.1 49.0)
+               "centripetal-time 92.1 49.0 == 1.51"
+               Double.approx)))

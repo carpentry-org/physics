@@ -22,13 +22,12 @@
       6.2831333976835149
       (Wave.displacement 13.0 21.0 9.0)
       "displacement 13 21 9 == 6.283133397683515")
-    (assert-op
-      test
-      3436.591412195351
-      (Wave.velocity 19.0 201.0 3.0)
-      "velocity 19 201 3 == 3436.591412195351"
-      Double.approx
-      ; TODO: cos in JS and C disagree
+    (assert-op test
+               3436.591412195351
+               (Wave.velocity 19.0 201.0 3.0)
+               "velocity 19 201 3 == 3436.591412195351"
+               Double.approx
+               ; TODO: cos in JS and C disagree
     )
     (assert-equal test
       219.96552790249206

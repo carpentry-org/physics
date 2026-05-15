@@ -76,13 +76,12 @@
       566.0
       (Electromagnetic.series &[92.0 90.0 293.0 91.0])
       "series [92 90 293 91] == 566")
-    (assert-op
-      test
-      0.000000000000005633189227582935
-      (Electromagnetic.flux-component 23.0 4.0 90.0)
-      "flux-component 23 4 90 == 0.000000000000005633189227582935"
-      Double.approx
-      ; TODO: cos in JS and C disagree
+    (assert-op test
+               0.000000000000005633189227582935
+               (Electromagnetic.flux-component 23.0 4.0 90.0)
+               "flux-component 23 4 90 == 0.000000000000005633189227582935"
+               Double.approx
+               ; TODO: cos in JS and C disagree
     )
     (assert-equal test
       -1152.0
